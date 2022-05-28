@@ -151,5 +151,7 @@ ReactDOM.render(<h1>Hello From React!</h1>, document.getElementById("root"));
 ![console!](public/images/console_log.png)
 
 5. Now you are ready to build your front-end. Good Luck!
+TIPS:
+- If you get tired of restarting your server use `npm run nodemon`
 
 ## Use React to create the front-end and meet requirements
