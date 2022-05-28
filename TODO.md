@@ -23,7 +23,7 @@ npm install
 ```
 If you do not have TMDB API Token go to the [README.md](README.md)
 
-Create `.env` file in root directory of this project
+Create `.env` file in root directory of this project and add these two lines:
 ```env
 TMDB_TOKEN=<your token>
 PORT=3000
