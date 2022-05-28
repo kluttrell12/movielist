@@ -127,16 +127,26 @@ npm run build
 9. If you suceeded. Great. No we can move on to the next section.
 
 [] - Test api by making a simple front-end request to get movies and output to console in dev environment and also in browser dev tools
-
+1. Update `src/index.js` to look like this.
 ```js
+import axios from "axios";
+import React, { useEffect } from "react";
+import ReactDOM from "react-dom";
+
 async function apiTest() {
   const data = await (await axios.get("/api/movies/popular")).data;
   console.log(data);
 }
 
 apiTest();
-```
 
-[] - save api output to file for testing and use this as mock data. you will need to import this at to top a file so that you can bypass api calls until your front-end is built
+ReactDOM.render(<h1>Hello From React!</h1>, document.getElementById("root"));
+```
+2. Restart server and rebuild build webpack. It would be ideal if you still have two terminals open.
+
+3. Go to http://localhost:3000
+4. Check console output in server and in browser. You should get results.
+
+5. Now you are ready to build your front-end. Good Luck!
 
 [] - Use React to create the front-end and meet requirements
