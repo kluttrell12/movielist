@@ -2,21 +2,6 @@ Please read [README.md](README.md) first
 
 PROMPT: Create a basic react application using the TMDB api.
 
-Requirements:
-
-- Display a list of movies
-- Dispay a separate list for the movies a user has liked: (it should start empty)
-- For each movie a user should be able to select a movie and add it to their list
-- A User should also be able to remove movies from their list
-
-Extra Challenges:
-
-- Stye with Material UI
-- Think of new ways to display the content
-- Allow the user to rename their list
-- Allow the user to have more than one list
-- Display multiple lists for a user to choose from
-
 ## Install Dependencies
 ```
 npm install
@@ -153,5 +138,22 @@ ReactDOM.render(<h1>Hello From React!</h1>, document.getElementById("root"));
 5. Now you are ready to build your front-end. Good Luck!
 TIPS:
 - If you get tired of restarting your server use `npm run nodemon`
+- If you get tired or rebuilding use `npm run watch` to rebuild automatically
+- Try using `npm run live` with `npm run nodemon` to have your browser auto refresh and your dev environment auto rebuild.
 
 ## Use React to create the front-end and meet requirements
+
+Requirements:
+
+- Display a list of movies
+- Dispay a separate list for the movies a user has liked: (it should start empty)
+- For each movie a user should be able to select a movie and add it to their list
+- A User should also be able to remove movies from their list
+
+Extra Challenges:
+
+- Stye with Material UI
+- Think of new ways to display the content
+- Allow the user to rename their list
+- Allow the user to have more than one list
+- Display multiple lists for a user to choose from
