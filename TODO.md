@@ -92,18 +92,18 @@ app.get("/api/movies/popular", async (req, res) => {
 ```bash
 npm start
 ```
-7. The Goal of this step is to serve static files. You should see `Hello World` when you navigate to http://localhost:3000
+7. The Goal of this step is to serve static files. You should see `Hello World` when you navigate to http://localhost:3000. When complete use ```control + C``` to stop server.
 
 [] - Create "Hello from React!" to make sure react and webpack are set up correctly
 
-1. In the `src` directory we need to create our _entry_ file. This is the file `webpack` will look for to bundle our application into one `js` file in our `public` directory.
-2. On line 5 we see
+1. In the `src` directory we need to create our _entry_ file. This is the file the [webpack](webpack.config.js) file will look for to bundle our application into one `js` file in our `public` directory.
+2. On line 5 of [webpack](webpack.config.js) we see
 
 ```js
         entry: './src/index.js',
 ```
 
-3.  So we should create our `./src/index.js` file and input our react logic there.
+3.  So we should create our `./src/index.js` file as that is then entry point of our [webpack](webpack.config.js) config file. Put this logic in `./src/index.js`
 
 ```js
 import React from "react";
@@ -112,14 +112,19 @@ import ReactDOM from "react-dom";
 ReactDOM.render(<h1>Hello From React!</h1>, document.getElementById("root"));
 ```
 
-4. Navigate to http://localhost:3000 and you should still see `Hello World`. Now uncomment out the `script` tag, likely on line 10 of `index.html`. We need the script to write to html on the `div` with id of `root`. Refresh the page.
-5. We now get an error. We need to build our `index.js` file from `webpack`. Run this cmd
+4. Start your server
+```bash
+npm start
+```
+5. Navigate to http://localhost:3000 and you should still see `Hello World`. Now uncomment out the `script` tag, likely on line 10 of `index.html`. We need the script to write to html on the `div` with id of `root`. Restart the server. (`control + c` to stop and `npm start` to run)
+6. We still see `Hello World`. Which is to be expected. We need to build our `src/index.js` file from `webpack`. Run this cmd in a separate terminal.
 
 ```bash
 npm run build
 ```
-
-6. Go to your browser and you should see `Hello from React!`. If you succeed remove `Hello World` from `index.html` file in the `root` div.
+7. Restart express server (`control + c` to stop and `npm start` to run)
+8. Go to your browser and you should see `Hello from React!`. If you succeed remove `Hello World` from `index.html` file in the `root` div.
+9. If you suceeded. Great. No we can move on to the next section.
 
 [] - Test api by making a simple front-end request to get movies and output to console in dev environment and also in browser dev tools
 
