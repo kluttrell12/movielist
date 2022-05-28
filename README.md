@@ -2,9 +2,17 @@
 
 ## Get Started
 
+Be sure to fork this repo and clone from your git repo
+```bash
+mkdir react && cd react
+git clone '<<your fork>>'
+```
+Install Dependencies
 ```
 npm install
 ```
+
+Go to [TODO.md](TODO.md) to see requirements for this exercise.
 
 ## Request API Key
 

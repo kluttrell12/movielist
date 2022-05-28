@@ -1,3 +1,5 @@
+Please read [README.md](README.md) first
+
 PROMPT: Create a basic react application using the TMDB api.
 
 Requirements:
