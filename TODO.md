@@ -17,7 +17,7 @@ Extra Challenges:
 - Allow the user to have more than one list
 - Display multiple lists for a user to choose from
 
-[] - Install Dependencies
+## Install Dependencies
 ```
 npm install
 ```
@@ -28,7 +28,7 @@ TMDB_TOKEN=<your token>
 PORT=3000
 ```
 
-[] - Understand the File Structure and `package.json` file
+## Understand the File Structure and `package.json` file
 
 1. In the `package.json` file look at the `scripts` field
 2. ```json
@@ -51,7 +51,7 @@ PORT=3000
 
 4. **NOTE** these scripts will not work until the app is propery configured.
 
-[] - Set up server to serve public files in public folder
+## Set up server to serve public files in public folder
 
 1. Create an `express` server in `server/server.js` file
 
@@ -94,7 +94,7 @@ npm start
 ```
 7. The Goal of this step is to serve static files. You should see `Hello World` when you navigate to http://localhost:3000. When complete use ```control + C``` to stop server.
 
-[] - Create "Hello from React!" to make sure react and webpack are set up correctly
+## Create "Hello from React!" to make sure react and webpack are set up correctly
 
 1. In the `src` directory we need to create our _entry_ file. This is the file the [webpack](webpack.config.js) file will look for to bundle our application into one `js` file in our `public` directory.
 2. On line 5 of [webpack](webpack.config.js) we see
@@ -126,7 +126,7 @@ npm run build
 8. Go to your browser and you should see `Hello from React!`. If you succeed remove `Hello World` from `index.html` file in the `root` div.
 9. If you suceeded. Great. No we can move on to the next section.
 
-[] - Test api by making a simple front-end request to get movies and output to console in dev environment and also in browser dev tools
+## Test api by making a simple front-end request to get movies and output to console in dev environment and also in browser dev tools
 1. Update `src/index.js` to look like this.
 ```js
 import axios from "axios";
@@ -146,7 +146,9 @@ ReactDOM.render(<h1>Hello From React!</h1>, document.getElementById("root"));
 
 3. Go to http://localhost:3000
 4. Check console output in server and in browser. You should get results.
+![browser!](public/images/browser_log.png)
+![console!](public/images/console_log.png)
 
 5. Now you are ready to build your front-end. Good Luck!
 
-[] - Use React to create the front-end and meet requirements
+## Use React to create the front-end and meet requirements
