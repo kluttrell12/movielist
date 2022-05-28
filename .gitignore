@@ -1,4 +1,6 @@
+# docs: https://git-scm.com/docs/gitignore
 .env
 package-lock.json
 *.log
 node_modules
+public/index.js

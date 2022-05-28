@@ -18,12 +18,17 @@ Extra Challenges:
 - Display multiple lists for a user to choose from
 
 [] - Install Dependencies
+```
+npm install
+```
 
-[] - Understand the File Structure
+Create `.env` file in root directory of this project
+```env
+TMDB_TOKEN=<your token>
+PORT=3000
+```
 
-[] - Set up server to serve public files in public folder
-
-[] - Create "Hello World" to make sure react and webpack are set up correctly
+[] - Understand the File Structure and `package.json` file
 
 1. In the `package.json` file look at the `scripts` field
 2. ```json
@@ -46,7 +51,7 @@ Extra Challenges:
 
 4. **NOTE** these scripts will not work until the app is propery configured.
 
-[] - Set up server to use API key generated from TMDB.
+[] - Set up server to serve public files in public folder
 
 1. Create an `express` server in `server/server.js` file
 
@@ -83,12 +88,13 @@ app.get("/api/movies/popular", async (req, res) => {
 3. We are using this server serve our static files in `public` directory and to proxy our API calls from our front-end to TMDB API to aviod [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
 4. We will use `morgan` for logging. See [docs](https://www.npmjs.com/package/morgan)
 5. This example can get complex, but lets keep it simple and create only one `GET` request as this is a front-end exercise.
-6. The Goal of this step is to serve static files. You should see `Hello World` when you navigate to http://localhost:3000
+6. Once you have your `server/server.js` file saved you can run:
 ```bash
 npm start
 ```
+7. The Goal of this step is to serve static files. You should see `Hello World` when you navigate to http://localhost:3000
 
-[] - Hello from React
+[] - Create "Hello from React!" to make sure react and webpack are set up correctly
 
 1. In the `src` directory we need to create our _entry_ file. This is the file `webpack` will look for to bundle our application into one `js` file in our `public` directory.
 2. On line 5 we see
@@ -116,6 +122,15 @@ npm run build
 6. Go to your browser and you should see `Hello from React!`. If you succeed remove `Hello World` from `index.html` file in the `root` div.
 
 [] - Test api by making a simple front-end request to get movies and output to console in dev environment and also in browser dev tools
+
+```js
+async function apiTest() {
+  const data = await (await axios.get("/api/movies/popular")).data;
+  console.log(data);
+}
+
+apiTest();
+```
 
 [] - save api output to file for testing and use this as mock data. you will need to import this at to top a file so that you can bypass api calls until your front-end is built
 
