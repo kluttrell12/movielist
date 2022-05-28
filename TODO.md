@@ -21,6 +21,7 @@ Extra Challenges:
 ```
 npm install
 ```
+If you do not have TMDB API Token go to the [README.md](README.md)
 
 Create `.env` file in root directory of this project
 ```env
